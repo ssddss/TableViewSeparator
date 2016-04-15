@@ -18,6 +18,8 @@ tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0xE2/255.0f green:0xE2/255.0f blue:0xE2/255.0f alpha:1].CGColor);
     CGContextStrokeRect(context, CGRectMake(0, rect.size.height - 1, rect.size.width, 1));
 }
+
+
 2.重写cell的setFrame方法,高度-1,露出背景色
 
 - (void)setFrame:(CGRect)frame
@@ -32,6 +34,9 @@ tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 // 设置tableView背景色
 self.tableView.backgroundColor = [UIColor colorWithWhite:215 / 255.0 alpha:1];
+
+
+
 3.利用系统属性设置(separatorInset, layoutMargins)共需添加三句代码:
 
 对tableView的separatorInset, layoutMargins属性的设置
